@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_02710d256e884b2bab69ef7e950d4b3f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+                <div style="position: fixed; 
+                            background-color: white;
+                            bottom: 50px; left: 50px; width: 180px; height: 300px; 
+                            border:2px solid grey; z-index:9999; font-size:14px;
+                            ">
+                            <br> &nbsp;<b> Legend</b> <br>
+                            <table style="width:100%">
+                              <tr><td> &nbsp; Adult Mozzi </td><td> <i class="fa fa-map-marker fa-2x" style="color:blue"></i></td></tr>
+                              <tr><td>&nbsp; Mozzi Larvae &nbsp; </td><td><i class="fa fa-map-marker fa-2x" style="color:green"></i></td></tr>
+                              <tr><td>&nbsp; Mozzi Eggs &nbsp; </td><td><i class="fa fa-map-marker fa-2x" style="color:orange"></i></td></tr>
+                              <tr><td>&nbsp; Still Water &nbsp; </td><td><i class="fa fa-map-marker fa-2x" style="color:red"></i></td></tr>
+                              </table>
+                </div>
+                
+    
+            <div class="folium-map" id="map_02710d256e884b2bab69ef7e950d4b3f" ></div>
+        
+</body>
+<script>    
+    
+            var map_02710d256e884b2bab69ef7e950d4b3f = L.map(
+                "map_02710d256e884b2bab69ef7e950d4b3f",
+                {
+                    center: [1.349, 103.748],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_dbabc8ff2bfa4a9489c9395bb0779c3d = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_02710d256e884b2bab69ef7e950d4b3f);
+        
+    
+            var feature_group_0e3faea2f1774f31928ec54b6777fcc7 = L.featureGroup(
+                {}
+            ).addTo(map_02710d256e884b2bab69ef7e950d4b3f);
+        
+    
+            var feature_group_ab9dadf797654d0999fe67ed2a4e491b = L.featureGroup(
+                {}
+            ).addTo(map_02710d256e884b2bab69ef7e950d4b3f);
+        
+    
+            var feature_group_b29347dc591e49a29fe7201250f50746 = L.featureGroup(
+                {}
+            ).addTo(map_02710d256e884b2bab69ef7e950d4b3f);
+        
+    
+            var feature_group_51d4d40e9209425195657b0c3c22fee3 = L.featureGroup(
+                {}
+            ).addTo(map_02710d256e884b2bab69ef7e950d4b3f);
+        
+    
+            var layer_control_b018b9b27ce3477c8e790db61fb6e7e1 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_dbabc8ff2bfa4a9489c9395bb0779c3d,
+                },
+                overlays :  {
+                    "Adult Mozzies" : feature_group_0e3faea2f1774f31928ec54b6777fcc7,
+                    "Mozzi Eggs" : feature_group_ab9dadf797654d0999fe67ed2a4e491b,
+                    "Mozzi Larvae" : feature_group_b29347dc591e49a29fe7201250f50746,
+                    "Still Water" : feature_group_51d4d40e9209425195657b0c3c22fee3,
+                },
+            };
+            L.control.layers(
+                layer_control_b018b9b27ce3477c8e790db61fb6e7e1.base_layers,
+                layer_control_b018b9b27ce3477c8e790db61fb6e7e1.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_02710d256e884b2bab69ef7e950d4b3f);
+        
+    
+            var marker_2fa2bd2ebf614f9bb6a7dec2fee17537 = L.marker(
+                [0.0, 0.2],
+                {}
+            ).addTo(feature_group_b29347dc591e49a29fe7201250f50746);
+        
+    
+            var icon_b5715f32f8e34380817ef029dd3f6b5c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_2fa2bd2ebf614f9bb6a7dec2fee17537.setIcon(icon_b5715f32f8e34380817ef029dd3f6b5c);
+        
+    
+        var popup_e4fa52e05026458c8fdec021dccaf3fa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_22a3e7851152468e9b24b5cb8a77d859 = $(`<div id="html_22a3e7851152468e9b24b5cb8a77d859" style="width: 100.0%; height: 100.0%;">MosquitoLarva</div>`)[0];
+            popup_e4fa52e05026458c8fdec021dccaf3fa.setContent(html_22a3e7851152468e9b24b5cb8a77d859);
+        
+
+        marker_2fa2bd2ebf614f9bb6a7dec2fee17537.bindPopup(popup_e4fa52e05026458c8fdec021dccaf3fa)
+        ;
+
+        
+    
+    
+            var marker_05103c508f0248d2847d1a664299d62a = L.marker(
+                [0.0, 1.0],
+                {}
+            ).addTo(feature_group_0e3faea2f1774f31928ec54b6777fcc7);
+        
+    
+            var icon_a34e864d322a4c2ab78927d541f0996b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_05103c508f0248d2847d1a664299d62a.setIcon(icon_a34e864d322a4c2ab78927d541f0996b);
+        
+    
+        var popup_b620fe25e6d4423caa61721ba5bcbbc0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b904d5add97a4ae4b3f6ad0af8013b1c = $(`<div id="html_b904d5add97a4ae4b3f6ad0af8013b1c" style="width: 100.0%; height: 100.0%;">AdultMosquito</div>`)[0];
+            popup_b620fe25e6d4423caa61721ba5bcbbc0.setContent(html_b904d5add97a4ae4b3f6ad0af8013b1c);
+        
+
+        marker_05103c508f0248d2847d1a664299d62a.bindPopup(popup_b620fe25e6d4423caa61721ba5bcbbc0)
+        ;
+
+        
+    
+</script>

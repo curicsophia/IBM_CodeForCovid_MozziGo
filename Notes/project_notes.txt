@@ -1,0 +1,26 @@
+download ibm cloud cli -https://cloud.ibm.com/docs/cli?topic=cli-install-ibmcloud-cli
+
+ibm cloud getting started python- https://cloud.ibm.com/apps/8464f343-26c0-4fd5-98dd-935214b1262e?paneId=startcoding&action=start&env_id=ibm:yp:us-south&ace_config=%7B%22crn%22%3A%22crn%3Av1%3Abluemix%3Apublic%3Acf%3Aus-south%3As%2F2fa2f3c4-0ea1-4660-be93-cdf355f9dc6c%3A%3Acf-application%3A8464f343-26c0-4fd5-98dd-935214b1262e%22%7D
+
+Download application:
+git clone https://github.com/IBM-Cloud/get-started-python
+
+Application directory, install requirements:
+pip install -r requirements.txt
+
+Edit manifest.yml file, add our own application > name
+
+	Login to ibmcloud, target foundry
+ibmcloud login
+ibmcloud target --cf
+	Install cloudfoundry:
+ibcloud cf install
+	Push application:
+ibmcloud cf push
+	Change region of acount
+ibmcloud target -r us-south
+
+list apps:
+ibmcloud cf apps
+delete apps:
+ibmcloud cf delete -r <App-name>
