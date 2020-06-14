@@ -27,7 +27,8 @@ The project has 2 main componets:
 ## The Long description
 TODO
 ## Our Project Roadmap
-TODO
+This is our project's roadmap.
+![Roadmap](Capture12.png)
 ## Getting Started
 There are 2 commponents: user mobile phone application and data server
 ### Mobile Phone application:
@@ -71,14 +72,15 @@ Follow application menus to add a new mosquito warning. The application will set
 
 3. Return to the visualisation map and refresh it. You will be able to see that the warning you created has been added to the database. 
 ## Built With
-- IBM Cloud Foundry
-- Thunkable
-- Python
-- Flask
-- Folium
-- Pandas
-- Numpy
+- IBM Cloud Foundry - https://www.ibm.com/sg-en/cloud/cloud-foundry
+- Thunkable - https://thunkable.com/home/
+- Python - https://www.python.org/
+- Flask - https://flask.palletsprojects.com/en/1.1.x/
+- Folium - https://pypi.org/project/folium/
+- Pandas - https://pandas.pydata.org/
+- Numpy - https://numpy.org/
 ## Authors
-TODO
-## Acknowledgements
-TODO
+Sophia Curic
+Anjali Curic
+Dayanita Saminathan
+Kaela Teh
