@@ -93,3 +93,56 @@ map.get_root().html.add_child(folium.Element(legend_html))
 
 #folium.Marker(location=[lat,long]).add_to(fgam)
 map.save('Map.html')
+
+# %%
+
+filename = 'test_points.csv'
+columns = ['lat','long','typeof']
+df = pd.DataFrame([[0,0,'adult'],[2,3,'larva']], columns = columns)
+df.to_csv(filename, index = False)
+
+#point_csv = pd.DataFrame([[4,3,'other']], columns = columns)
+point_save = ','.join([str(e) for e in [4,3,'other']]) +'\n'
+with open(filename,'a+') as f:
+    f.write(point_save)
+    
+df_load = pd.read_csv(filename, header= None)
+df_load.columns = columns    
+#%%
+
+lists = [df[e].tolist() for e in df.columns]
+rows = [e for e in zip(*lists)]
+
+rows2 = df.to_dict(orient = 'records')
+
+# %%
+
+d = {'lat':3,'badkey':'bad','long':5,'typeof':'other'}
+#d = None
+d = ['stupid args']
+
+# %%
+
+res = {'lat':3,'badkey':'bad','long':5,'typeof':'other'}
+res = None
+
+if res:
+    try:
+        lat,long,typeof = res.split(',')
+        lat =float(lat)
+        long = float(long)
+        #record_point(lat, long, typeof)
+        print( 'Successfuly added: %s' % res)
+    except Exception as e:
+        print( 'Invalid argument %s, ERROR: %s' % (res,e))
+else:
+    print( 'Expected lat,long,typeof')
+    
+
+# %%
+    
+import requests
+url = 'http://coolvest-persistent-platypus-ec.mybluemix.net/point'
+res = requests.post(url, json= '3,4,other')
+if res.ok:
+    print (res)
