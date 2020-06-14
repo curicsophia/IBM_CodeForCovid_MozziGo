@@ -1,5 +1,5 @@
 # MozziGo
-Our github repository with all of our code and links to our mobile app
+This github repository contains our **IBM Code for Covid** project and its documentation files.
 ## Contents
 - Short description
 - Demo video
@@ -31,19 +31,17 @@ TODO
 ## Getting Started
 There are 2 commponents: user mobile phone application and data server
 ### Mobile Phone application:
-THe github repostiory contains an **Android APK** file:
+The github repostiory contains an **Android APK** file:
 ```
 TODO location of APK
 ```
 Download the APK file to your Android mobile phone (eg. email or data transfer) and open it to install our application
-### Data server on IBMCloud
-THe data server is already live, managed by **IBM Cloud Foundry**
+### Data server on IBM Cloud
+The data server is already live, managed by **IBM Cloud Foundry**
 The main database entry points are:
-Map request:
-&nbsp
-http://coolvest-persistent-platypus-ec.mybluemix.net/map
-&nbsp
-Event declaration. The `<latitude>`, `<longitude>`, `<event_type>` parameters must be set to the values observed by the user:
+- Map request:  
+http://coolvest-persistent-platypus-ec.mybluemix.net/map  
+- Event declaration. The `<latitude>`, `<longitude>`, `<event_type>` parameters must be set to the values observed by the user:
 ```
 http://coolvest-persistent-platypus-ec.mybluemix.net/point?key=<latitude>,<longitude>,<event_type>
 ```
@@ -57,16 +55,15 @@ TODO Full install walkthrough file
 ```
 ## Running the Tests
 There are no automated tests associated with this project.
-The mobile application was developped using **Thunkable** and the web server was developed using **Python** and **Flask**
+The mobile application was developped using **Thunkable** and the web server was developed using **Python** and **Flask**.
 Application testing was done in the development environment.
 
 ## Live Demo
 The folowing scenario will demonstrate some basic project functionalities:
-1. Use the warning visualisation map. Browse to: &nbsp
-http://coolvest-persistent-platypus-ec.mybluemix.net/map
-&nbsp
+1. Use the warning visualisation map. Browse to:  
+http://coolvest-persistent-platypus-ec.mybluemix.net/map  
 You can pan and zoom the map to see the mosquito sighting points.
-Event selection controls (top right corner of the map) allow you to filter and browse specific sighting types
+Event selection controls (top right corner of the map) allow you to filter and browse specific sighting types.
 
 2. Open your **MozziGo** Android phone application.
 The application can be installed by downloading the **Android APK** `MozziGo.apk` from this git repository.
