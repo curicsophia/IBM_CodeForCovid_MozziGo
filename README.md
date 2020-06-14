@@ -14,29 +14,29 @@ This github repository contains our **IBM Code for Covid** project and its docum
 - License
 - Acknowledgments
 ## Short Description
-TODO
 ### Our Problem
+Dengue is a large and prevailing problem in SouthEast Asian countries such as Singapore. Circuit breaker due to COVID-19 is another factor, making this situation worse. When more people stay at home all day, there could be more residential mosquito breeding and more opportunities for 'blood meals'." Effective monitoring is one of the most important factors in preventing dengue from spreading in our community.
 ### How can technology help?
+Here technology and big data are used to better visualize dengue hotspots and effectively target pest control.  It is an upstream solution for preventing the spread.
 ### Our Idea
+Our solution is to introduce an app called MozzieGo which allows us to crowdsource mosquito sightings from the general public. Data is then sent to IBM cloud foundry which then returns the data in the form of a map.
 ## Our Demo
 TODO
 ## The Arcitecture
 The project has 2 main componets:
 1. User application, running on mobile phone
-2. Date processign server, running on **IBM Cloud**
+2. Data processing server, setup using cloud foundry and running on **IBM Cloud**
 ## The Long description
-TODO
+The long description of our project an be found at https://docs.google.com/document/d/1hbgReQhugyP_LoH-JBmeS0kD3nk_brT0FU1I2KtGonQ/edit?usp=sharing
 ## Our Project Roadmap
 This is our project's roadmap.
-![Roadmap](Capture12.png)
+https://docs.google.com/presentation/d/1eeWZ2JvRmoypdHL7c7zSHHGMNnslv40GaT8cyIdjgUQ/edit?usp=sharing
 ## Getting Started
 There are 2 commponents: user mobile phone application and data server
 ### Mobile Phone application:
-The github repostiory contains an **Android APK** file:
-```
-TODO location of APK
-```
+This is the link to the apk file which you can use to download our app. https://drive.google.com/file/d/1bovsgcI7Vx_0asrQeSmuO8mwrBFcIxZJ/view?usp=sharing
 Download the APK file to your Android mobile phone (eg. email or data transfer) and open it to install our application
+To view our thunkable code go to https://x.thunkable.com/projectPage/5ee5a8d0a68c746165237a1f.
 ### Data server on IBM Cloud
 The data server is already live, managed by **IBM Cloud Foundry**
 The main database entry points are:
@@ -50,10 +50,7 @@ Example:
 ```
 http://coolvest-persistent-platypus-ec.mybluemix.net/point?key=1.36,103.82,MosquitoLarva
 ```
-A full description on how to create an **IBM CLoud** account and push a project to the **IBM Cloud Foundry** can be found in out github repository file:
-```
-TODO Full install walkthrough file
-```
+
 ## Running the Tests
 There are no automated tests associated with this project.
 The mobile application was developped using **Thunkable** and the web server was developed using **Python** and **Flask**.
@@ -69,6 +66,7 @@ Event selection controls (top right corner of the map) allow you to filter and b
 2. Open your **MozziGo** Android phone application.
 The application can be installed by downloading the **Android APK** `MozziGo.apk` from this git repository.
 Follow application menus to add a new mosquito warning. The application will set the warning location to your phone location.
+To view our thunkable code go to https://x.thunkable.com/projectPage/5ee5a8d0a68c746165237a1f.
 
 3. Return to the visualisation map and refresh it. You will be able to see that the warning you created has been added to the database. 
 ## Built With
